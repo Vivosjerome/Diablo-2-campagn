@@ -368,7 +368,7 @@
     }
 
     ctx.fillStyle = "rgba(201, 163, 90, .85)";
-    ctx.font = "11px Cinzel, serif";
+    ctx.font = "16px Cinzel, serif";
     ctx.textAlign = "center";
     ctx.fillText("N", w / 2, 14);
     ctx.fillText("S", w / 2, h - 8);

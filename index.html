@@ -72,6 +72,53 @@
     <p>Stay a while and listen. · Hors-ligne · Progression sauvegardée localement</p>
   </footer>
 
+  <button type="button" class="game-launcher" id="game-launcher" aria-haspopup="dialog" aria-controls="game-overlay">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="10" y="10" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M10 32 H54 M32 10 V54" stroke="currentColor" stroke-width="1" opacity=".45"/>
+      <circle cx="32" cy="48" r="3.2" fill="currentColor"/>
+      <path d="M32 48 L32 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M28 22 H36 V28 H40 L32 38 L24 28 H28 Z" fill="currentColor" opacity=".9"/>
+    </svg>
+    <span>Tuiles</span>
+  </button>
+
+  <div class="game-overlay" id="game-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="game-title">
+    <div class="game-panel">
+      <header class="game-panel__head">
+        <div>
+          <p class="game-kicker">Entraînement</p>
+          <h2 id="game-title">Lecture de tuile</h2>
+        </div>
+        <button type="button" class="game-close" id="game-close" aria-label="Fermer">✕</button>
+      </header>
+
+      <p class="game-brief" id="game-brief">Tu es à l'entrée. Lis l'axe du couloir, puis choisis la zone où se trouve la sortie.</p>
+
+      <div class="game-meta">
+        <span id="game-dungeon-name">—</span>
+        <span id="game-score">Série 0 · Record 0</span>
+      </div>
+
+      <div class="game-stage" id="game-stage">
+        <canvas id="dungeon-canvas" width="640" height="640"></canvas>
+        <div class="game-zones" id="game-zones">
+          <button type="button" data-zone="nw"><span class="zone-full">Haut-Gauche</span><span class="zone-short">HG</span></button>
+          <button type="button" data-zone="ne"><span class="zone-full">Haut-Droite</span><span class="zone-short">HD</span></button>
+          <button type="button" data-zone="sw"><span class="zone-full">Bas-Gauche</span><span class="zone-short">BG</span></button>
+          <button type="button" data-zone="se"><span class="zone-full">Bas-Droite</span><span class="zone-short">BD</span></button>
+        </div>
+      </div>
+
+      <p class="game-feedback" id="game-feedback" hidden></p>
+
+      <div class="game-actions">
+        <button type="button" id="game-next" hidden>Tuile suivante</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

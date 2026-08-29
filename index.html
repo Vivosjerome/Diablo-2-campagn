@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D2R — Maphack Mental | Guide de campagne</title>
+  <meta name="description" content="Guide de navigation rapide et check-list de campagne pour Diablo II Resurrected. La règle de la tuile d'entrée, donjon par donjon.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23c9a35a' d='M32 4 L38 24 L58 24 L42 36 L48 56 L32 44 L16 56 L22 36 L6 24 L26 24 Z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__vignette"></div>
+    <div class="atmosphere__embers"></div>
+    <div class="atmosphere__grain"></div>
+  </div>
+
+  <header class="hero">
+    <div class="sigil" aria-hidden="true">
+      <svg viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="1.2" opacity=".45"/>
+        <circle cx="40" cy="40" r="28" stroke="currentColor" stroke-width=".8" opacity=".3"/>
+        <path d="M40 8 L48 32 L72 32 L52 46 L60 70 L40 54 L20 70 L28 46 L8 32 L32 32 Z" stroke="currentColor" stroke-width="1.4" fill="currentColor" fill-opacity=".08"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Diablo II Resurrected</p>
+    <h1>Maphack Mental</h1>
+    <p class="tagline">Guide de navigation rapide &amp; check-list de campagne</p>
+    <div class="ornament" aria-hidden="true">
+      <span></span><i></i><span></span>
+    </div>
+
+    <aside class="rules-card">
+      <div class="rules-card__seal">90°</div>
+      <div>
+        <h2>La règle d'or de la tuile d'entrée</h2>
+        <p>Arrête-toi à l'entrée d'un donjon. Regarde l'<strong>axe du couloir</strong> (pas ton perso). La sortie se trouve à <strong>90° vers la gauche</strong> (sens anti-horaire) dans 90&nbsp;% des donjons clos.</p>
+      </div>
+    </aside>
+
+    <section class="progress-panel" aria-label="Avancement de la campagne">
+      <div class="progress-panel__meta">
+        <span id="progress-label">Campagne</span>
+        <span id="progress-count">0 / 0</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+        <div class="progress-track__fill" id="progress-fill"></div>
+      </div>
+    </section>
+
+    <nav class="filters" aria-label="Filtrer par acte">
+      <button class="filter-btn active" data-act="all" type="button">Tous</button>
+      <button class="filter-btn" data-act="1" type="button">Acte I</button>
+      <button class="filter-btn" data-act="2" type="button">Acte II</button>
+      <button class="filter-btn" data-act="3" type="button">Acte III</button>
+      <button class="filter-btn" data-act="4" type="button">Acte IV</button>
+      <button class="filter-btn" data-act="5" type="button">Acte V</button>
+      <button id="reset-btn" type="button">Réinitialiser</button>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <div class="ornament ornament--small" aria-hidden="true">
+      <span></span><i></i><span></span>
+    </div>
+    <p>Stay a while and listen. · Hors-ligne · Progression sauvegardée localement</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
